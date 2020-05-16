@@ -31,8 +31,8 @@ def mayus(update, context):
 def alreves(update, context):
     """Repite el mensaje del usuario."""
     msj_alreves = ""
-        for m in context.args:
-            msj_alreves += m[::-1] + ' '
+    for m in context.args:
+        msj_alreves += m[::-1] + ' '
 
     return msj_alreves
 
