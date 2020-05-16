@@ -30,7 +30,7 @@ def mayus(update, context):
 
 def alreves(update, context):
     """Repite el mensaje del usuario."""
-    msj = update.mensaje.text
+    msj = update.message.text
 
     return msj[::-1]
 
