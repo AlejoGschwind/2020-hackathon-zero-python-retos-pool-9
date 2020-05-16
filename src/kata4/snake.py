@@ -1,9 +1,9 @@
 import pygame, sys, time, random
 from pygame.locals import *
 
-pygame.init()
-play_surface = pygame.display.set_mode((500, 500))
-fps = pygame.time.Clock()
+# pygame.init()
+# play_surface = pygame.display.set_mode((500, 500))
+# fps = pygame.time.Clock()
 
 class Snake():
     position = [100,50]
@@ -128,5 +128,5 @@ def main():
 # Comienza la aventura!!!!
 # Descomentar para lanzar el juego en local
 # Comentar para validar con el oráculo
-main()
-pygame.quit()
+# main()
+# pygame.quit()
