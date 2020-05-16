@@ -12,29 +12,27 @@ logger = logging.getLogger(__name__)
 # Definimos algunas funciones para los comandos. Estos generalmente toman los dos argumentos update y context
 def start(update, context):
     """Envia un mensaje cuando se emita el comando /start."""
-    update.message.reply_text('Hola, Geeks!')
+    return 'Hola, Geeks!'
 
 def help(update, context):
     """Envia un mensaje cuando se emita el comando /help."""
-    update.message.reply_text('Ayudame!')
+    return 'Ayudame!'
 
 def mayus(update, context):
         # Mensaje a partir del areglo de argumentos.
         msj = ""
         for m in context.args:
             msj += m + ' '
-        
+        msj = msj[:-1]
         # Pasamos el mensaje a mayusculas
         msj_mayusculas = msj.upper()
         return msj_mayusculas
 
 def alreves(update, context):
     """Repite el mensaje del usuario."""
-    msj_alreves = ""
-    for m in context.args:
-        msj_alreves += m[::-1] + ' '
+    msj = update.mensaje.text
 
-    return msj_alreves
+    return msj[::-1]
 
 def error(update, context):
     """Envia los errores por consola"""
