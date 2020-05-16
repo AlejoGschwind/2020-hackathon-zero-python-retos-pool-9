@@ -21,8 +21,8 @@ def help(update, context):
 def mayus(update, context):
         # Mensaje a partir del areglo de argumentos.
         msj = ""
-        for i in context.args:
-            msj += context.args[i] + ' '
+        for m in context.args:
+            msj += m + ' '
         
         # Pasamos el mensaje a mayusculas
         msj_mayusculas = msj.upper()
@@ -30,12 +30,10 @@ def mayus(update, context):
 
 def alreves(update, context):
     """Repite el mensaje del usuario."""
-    msj = ""
-        for i in context.args:
-            msj += context.args[i] + ' '
-    
-    # Mensaje al reves
-    msj_alreves = msj[::-1]
+    msj_alreves = ""
+        for m in context.args:
+            msj_alreves += m[::-1] + ' '
+            
     return msj_alreves
 
 def error(update, context):
