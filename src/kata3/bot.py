@@ -33,7 +33,7 @@ def alreves(update, context):
     msj_alreves = ""
         for m in context.args:
             msj_alreves += m[::-1] + ' '
-            
+
     return msj_alreves
 
 def error(update, context):
@@ -64,7 +64,7 @@ def main():
     # Y este espera al error
     dp.add_error_handler(error)
 
-    # Lanzamos el Bot
+    # Lanzamos el Bot.
     updater.start_polling()
 
     updater.idle()
