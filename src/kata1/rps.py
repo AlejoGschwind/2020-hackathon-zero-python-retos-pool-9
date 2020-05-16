@@ -8,10 +8,9 @@ options = ["Piedra", "Papel", "Tijeras"]
 #'Perdiste!'
 
 def quienGana(player, ai):
-    player = player.lower()
-    player[0].upper()
-    ai = ai.lower()
-    ai[0].upper()
+    player = player[0].upper() + player[1:].lower()
+    ai = ai[0].upper() + ai[1:].lower()
+    print(player, ai)
     if (player == ai):
         return 'Empate!'
     else:
